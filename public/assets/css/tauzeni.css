@@ -1,0 +1,118 @@
+/* Author:Innocent Tauzeni */
+
+.pro_primary {
+    background-color: #155bd5 !important;
+}
+
+.bg-body-tertiary {
+    background-color: #155bd5 !important;
+}
+.navbar-toggler-icon {
+    background-color: #fff !important;
+}
+
+main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+main .btn-light {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+}
+
+main .btn-outline-light {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+main img {
+    border-radius: 5px;
+}
+.btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.custom-btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-primary.custom-btn {
+    background-color: #fff;
+    color: #0056b3;
+    border: none;
+}
+
+.btn-primary.custom-btn:hover {
+    background-color: #e6e6e6;
+}
+
+.btn-outline-light.custom-btn {
+    color: #fff;
+    background-color: transparent;
+}
+
+.btn-outline-light.custom-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.custom-btn i {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+.content-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+.content-text {
+    max-width: 500px;
+}
+.btn-group button {
+    margin-right: 5px;
+}
+.btn-primary {
+    background-color: #007bff;
+}
+
+.icon-border-red {
+    border: 1px solid #155bd5 !important;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 100px;
+    color: #155bd5 !important;
+}
+
+.service {
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #155bd5 !important;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.bg-lightt {
+    background-color: #dde0e2 !important;
+}

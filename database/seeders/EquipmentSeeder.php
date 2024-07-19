@@ -13,6 +13,7 @@ class EquipmentSeeder extends Seeder
      */
     public function run(): void
     {
+        //create test data 
         Equipment::create([
             'name' => 'Laptop',
             'type' => 'Electronics',

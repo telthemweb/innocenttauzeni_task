@@ -16,6 +16,8 @@ class RolePermissionSeeder extends Seeder
      */
     public function run(): void
     {
+
+        //system permissions
         $permissionslist=[
             'view roles',
             'create roles',
@@ -32,12 +34,12 @@ class RolePermissionSeeder extends Seeder
             'unasign equipment',
             'record equipments',
         ];
-
+//now add all permission into database
         foreach($permissionslist as $permission){
             Permission::create(['name'=>$permission]);
         }
 
-
+       //system rolew
         $superAdmin = Role::create([
             'name' => 'Super Admin',
         ]);
@@ -49,6 +51,8 @@ class RolePermissionSeeder extends Seeder
         $regularUser = Role::create([
             'name' => 'Regular User',
         ]);
+
+        //assign permisson to role
         $superAdmin->givePermissionTo(Permission::all());
         $companyAdmin->givePermissionTo([
             'view users',
@@ -59,13 +63,15 @@ class RolePermissionSeeder extends Seeder
             'assign equipment',
             'unasign equipment',
         ]);
+
+        //assign regular role to permisson
         $regularUser->givePermissionTo([
             'record equipments',
             'view equipments',
         ]);
 
 
-
+//create super admin
         $superAdminuser =  User::create([
             'name' => 'Innocent Tauzeni',
             'phone' => '0774914150',
@@ -73,8 +79,11 @@ class RolePermissionSeeder extends Seeder
             'gender' => 'Male',
             'password' => Hash::make('!physmach89')
         ]);
+        //assign super admin to role
         $superAdminuser->assignRole($superAdmin);
 
+
+        //create company admin
         $companyAdminuser =  User::create([
             'name' => 'Keryleen Adael',
             'phone' => '0719914150',
@@ -82,8 +91,10 @@ class RolePermissionSeeder extends Seeder
             'gender' => 'Female',
             'password' => Hash::make('!adael1234@')
         ]);
+        //assign company admin to role
         $companyAdminuser->assignRole($companyAdmin);
 
+        //create regular user
         $regularUseraccount =  User::create([
             'name' => 'Andile Jamu',
             'phone' => '0774482844',
@@ -91,6 +102,7 @@ class RolePermissionSeeder extends Seeder
             'gender' => 'Male',
             'password' => Hash::make('!Andilejamu@#')
         ]);
+        //assign regular user to role
         $regularUseraccount->assignRole($regularUser);
     }
 }

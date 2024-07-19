@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        //seed all data to database
         $this->call([
             RolePermissionSeeder::class,
             EquipmentSeeder::class
